@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe:*)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(pip install:*)",
+      "Bash(streamlit run:*)"
+    ]
+  }
+}
