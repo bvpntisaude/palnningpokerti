@@ -179,16 +179,8 @@ def heartbeat(player_id: str):
     conn.close()
 
 
-def remove_inactive_players(room_id: str, seconds: int = 30):
-    conn = get_connection()
-    cursor = conn.cursor()
-    cursor.execute(
-        "DELETE FROM players WHERE room_id = %s AND last_seen < NOW() - INTERVAL %s SECOND",
-        (room_id, seconds),
-    )
-    conn.commit()
-    cursor.close()
-    conn.close()
+def remove_inactive_players(room_id: str, seconds: int = 300):
+    pass
 
 
 # ── Votes ──────────────────────────────────────────────────────────────────────
